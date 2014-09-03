@@ -6,9 +6,13 @@
 //  Copyright (c) 2014 Dave Krawczyk. All rights reserved.
 //
 
+#import "Dragon.h"
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, strong) NSArray *dragonsArray;
 
 @end
 
@@ -16,12 +20,33 @@
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+
+    Dragon *smaug = [[Dragon alloc]init];
+    smaug.fullname = @"Smaug Dragon";
+    
+    NSLog(@"%@",smaug.fullname);
+    
+    self.dragonsArray = [NSArray arrayWithObject:@"Smaug"];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dragonsArray.count;
 }
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dragonCellID"];
+    cell.textLabel.text = [self.dragonsArray objectAtIndex:indexPath.row];
+    
+    return cell;
+    
+}
+
+
+
 
 @end
