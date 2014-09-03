@@ -8,7 +8,7 @@
 
 #import "Dragon.h"
 #import "ViewController.h"
-
+#import "ClothingDetailViewController.h"
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -22,12 +22,21 @@
     [super viewDidLoad];
 
 
-    Dragon *smaug = [[Dragon alloc]init];
-    smaug.fullname = @"Smaug Dragon";
+    Dragon *dragon1 = [[Dragon alloc]initWithFullname:@"Smaug Dragon" andClothingItem:@"High heels"];
+
+    Dragon *dragon2 = [[Dragon alloc]initWithFullname:@"Spyro Dragon" andClothingItem:@"Pocket Protector"];
     
-    NSLog(@"%@",smaug.fullname);
+    Dragon *dragon3 = [[Dragon alloc]initWithFullname:@"Drake Dragon" andClothingItem:@"Weird Glasses!"];
     
-    self.dragonsArray = [NSArray arrayWithObject:@"Smaug"];
+    Dragon *dragon4 = [[Dragon alloc]initWithFullname:@"Ryan Dragon" andClothingItem:@"Wig"];
+    
+    self.dragonsArray = [NSArray arrayWithObjects:dragon1,dragon2,dragon3,dragon4,nil];
+    
+
+    
+    for (Dragon *aDragon in self.dragonsArray) {
+        NSLog(@"%@",aDragon);
+    }
 
 }
 
@@ -40,10 +49,23 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"dragonCellID"];
-    cell.textLabel.text = [self.dragonsArray objectAtIndex:indexPath.row];
+    
+    Dragon *aDragon = [self.dragonsArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = aDragon.fullname;
+    cell.detailTextLabel.text = aDragon.signatureClothingItem;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)cell
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    Dragon *dragon = [self.dragonsArray objectAtIndex:indexPath.row];
     
+    ClothingDetailViewController *viewController = (ClothingDetailViewController *)segue.destinationViewController;
+    viewController.title = dragon.signatureClothingItem;
+    viewController.dragon = dragon;
 }
 
 

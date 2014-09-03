@@ -14,6 +14,7 @@
 		2396FC4219B79C8F006DE864 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2396FC4119B79C8F006DE864 /* Images.xcassets */; };
 		2396FC4E19B79C8F006DE864 /* DragonFashionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396FC4D19B79C8F006DE864 /* DragonFashionTests.m */; };
 		2396FC5919B79EBF006DE864 /* Dragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396FC5819B79EBF006DE864 /* Dragon.m */; };
+		2396FC5C19B7A562006DE864 /* ClothingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396FC5B19B7A562006DE864 /* ClothingDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		2396FC4D19B79C8F006DE864 /* DragonFashionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragonFashionTests.m; sourceTree = "<group>"; };
 		2396FC5719B79EBF006DE864 /* Dragon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dragon.h; sourceTree = "<group>"; };
 		2396FC5819B79EBF006DE864 /* Dragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dragon.m; sourceTree = "<group>"; };
+		2396FC5A19B7A562006DE864 /* ClothingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClothingDetailViewController.h; sourceTree = "<group>"; };
+		2396FC5B19B7A562006DE864 /* ClothingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClothingDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				2396FC3919B79C8F006DE864 /* AppDelegate.m */,
 				2396FC3B19B79C8F006DE864 /* ViewController.h */,
 				2396FC3C19B79C8F006DE864 /* ViewController.m */,
+				2396FC5A19B7A562006DE864 /* ClothingDetailViewController.h */,
+				2396FC5B19B7A562006DE864 /* ClothingDetailViewController.m */,
 				2396FC5719B79EBF006DE864 /* Dragon.h */,
 				2396FC5819B79EBF006DE864 /* Dragon.m */,
 				2396FC3E19B79C8F006DE864 /* Main.storyboard */,
@@ -222,6 +227,7 @@
 			files = (
 				2396FC3D19B79C8F006DE864 /* ViewController.m in Sources */,
 				2396FC3A19B79C8F006DE864 /* AppDelegate.m in Sources */,
+				2396FC5C19B7A562006DE864 /* ClothingDetailViewController.m in Sources */,
 				2396FC5919B79EBF006DE864 /* Dragon.m in Sources */,
 				2396FC3719B79C8F006DE864 /* main.m in Sources */,
 			);
