@@ -15,6 +15,7 @@
 		2396FC4E19B79C8F006DE864 /* DragonFashionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396FC4D19B79C8F006DE864 /* DragonFashionTests.m */; };
 		2396FC5919B79EBF006DE864 /* Dragon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396FC5819B79EBF006DE864 /* Dragon.m */; };
 		2396FC5C19B7A562006DE864 /* ClothingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396FC5B19B7A562006DE864 /* ClothingDetailViewController.m */; };
+		C44E1BD41AD6C60A008CE6F8 /* DragonSlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44E1BD31AD6C60A008CE6F8 /* DragonSlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		2396FC5819B79EBF006DE864 /* Dragon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dragon.m; sourceTree = "<group>"; };
 		2396FC5A19B7A562006DE864 /* ClothingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClothingDetailViewController.h; sourceTree = "<group>"; };
 		2396FC5B19B7A562006DE864 /* ClothingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClothingDetailViewController.m; sourceTree = "<group>"; };
+		C44E1BD21AD6C60A008CE6F8 /* DragonFashion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DragonFashion-Bridging-Header.h"; sourceTree = "<group>"; };
+		C44E1BD31AD6C60A008CE6F8 /* DragonSlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragonSlayer.swift; path = ../DragonSlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,7 @@
 				2396FC3319B79C8F006DE864 /* DragonFashion */,
 				2396FC4A19B79C8F006DE864 /* DragonFashionTests */,
 				2396FC3219B79C8F006DE864 /* Products */,
+				C44E1BD21AD6C60A008CE6F8 /* DragonFashion-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +98,7 @@
 				2396FC5719B79EBF006DE864 /* Dragon.h */,
 				2396FC5819B79EBF006DE864 /* Dragon.m */,
 				2396FC3E19B79C8F006DE864 /* Main.storyboard */,
+				C44E1BD31AD6C60A008CE6F8 /* DragonSlayer.swift */,
 				2396FC4119B79C8F006DE864 /* Images.xcassets */,
 				2396FC3419B79C8F006DE864 /* Supporting Files */,
 			);
@@ -182,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2396FC2C19B79C8F006DE864 /* Build configuration list for PBXProject "DragonFashion" */;
+			buildConfigurationList = 2396FC2C19B79C8F006DE864 /* Build configuration list for PBXProject "dragonfashion" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -225,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44E1BD41AD6C60A008CE6F8 /* DragonSlayer.swift in Sources */,
 				2396FC3D19B79C8F006DE864 /* ViewController.m in Sources */,
 				2396FC3A19B79C8F006DE864 /* AppDelegate.m in Sources */,
 				2396FC5C19B7A562006DE864 /* ClothingDetailViewController.m in Sources */,
@@ -344,9 +350,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DragonFashion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DragonFashion-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -355,9 +365,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = DragonFashion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DragonFashion-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -398,7 +411,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2396FC2C19B79C8F006DE864 /* Build configuration list for PBXProject "DragonFashion" */ = {
+		2396FC2C19B79C8F006DE864 /* Build configuration list for PBXProject "dragonfashion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2396FC4F19B79C8F006DE864 /* Debug */,
@@ -414,6 +427,7 @@
 				2396FC5319B79C8F006DE864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2396FC5419B79C8F006DE864 /* Build configuration list for PBXNativeTarget "DragonFashionTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +436,7 @@
 				2396FC5619B79C8F006DE864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

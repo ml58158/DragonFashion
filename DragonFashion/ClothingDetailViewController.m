@@ -7,6 +7,7 @@
 //
 
 #import "ClothingDetailViewController.h"
+#import <DragonFashion-Swift.h>
 
 @interface ClothingDetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -20,12 +21,13 @@
     // Do any additional setup after loading the view.
     
     self.nameLabel.text = self.dragon.fullname;
+
+    DragonSlayer *shrek = [[DragonSlayer alloc] init];
+    [shrek slayDragon:self.dragon];
+    NSLog(@"slain dragons %@" , shrek.slainDragons);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 
